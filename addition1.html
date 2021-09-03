@@ -1,0 +1,45 @@
+<html>
+    <head>
+        <title>calculator</title>
+        <style>
+            fieldset{
+                width: 50%;height: 50%;
+            }
+            input{
+                width: 30%;
+                height: 10%;
+            }
+
+        </style>
+    </head>
+    <body><center>
+        <fieldset style="background-color: lightblue;" >
+        
+        <input type="text" name="" id=""placeholder="firstvalue"/><br><br>
+        <input type="text" name="" id=""placeholder="secondvalue"/><br><br>
+        <button id="v1">+</button>
+        <button id="v2">-</button>
+        <button id="v3">*</button>
+        <button id="v4">/</button>
+        <button id="v5">%</button>
+        <button id="v6">**</button>
+        <h1>TOTAL</h1>
+   
+</fieldset>
+</center> 
+    <style>
+        button{background-color:red;color:white;padding:10px}
+        input{border:2px solid red;background-color:lightgreen}
+    </style>
+    <script>
+        document.getElementById("v1").addEventListener("click",add_fun)
+        function add_fun()
+        {
+            var f_num=document.getElementsByTagName("input")[0].value
+            var s_num=document.getElementsByTagName("input")[1].value
+            var result=parseInt(f_num)+parseInt(s_num)
+            document.getElementsByTagName("h1")[0].innerHTML="result is .."+result
+
+
+        }
+    </script>

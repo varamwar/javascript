@@ -1,0 +1,39 @@
+<html>
+    <head>
+        <title>salary</title>
+        <style>
+            fieldset{
+                width: 50%;text-align: center;
+            }
+            
+        </style>
+    </head>
+    <body>
+        <fieldset>
+        <input type="salary" placeholder="enter salary"><br>
+        <input type="bonus" placeholder="enter bonus"><br>
+        <input type="cutting" placeholder="enter cuttings"><br>
+        <button id="v1">submit</button>
+        <h1>TOTAL</h1>
+    
+
+        <script>
+            document.getElementById("v1").addEventListener("click",cal_fun)
+            function cal_fun()
+            {
+                var salary=document.getElementsByTagName("input")[0].value
+                var bonus=document.getElementsByTagName("input")[1].value
+                var cutting=document.getElementsByTagName("input")[2].value
+                var f_salary=parseInt(salary)+parseInt(bonus)-parseInt(cutting)
+                
+                document.getElementsByTagName("h1")[0].innerHTML="TOTAL is .."+f_salary
+                alert("salary is .."+f_salary)
+
+            }
+       
+        
+        </script>
+        
+    </fieldset>
+    </body>
+</html>
