@@ -1,0 +1,96 @@
+<html>
+    <head>
+        <title>caluclator</title>
+        <style>
+            fieldset{
+                margin-left: 30%;margin-right: 30%;
+            }
+            button{
+                width: 8%;height: 8%;
+            }
+            input{
+                font-size: medium;text-align: center;
+            }
+            button{
+                font-size: x-large;
+            } 
+           .a1{
+               width: 10%;height: 5%;
+           }
+            fieldset{
+                background-color: dimgray;
+            }
+            #t1{
+                width: 40%;
+            }
+            .t1{
+                font-size: 300%;margin-top: 25px;position: absolute;margin-left: 600px;
+            }
+
+        </style>
+    </head>
+    <body>
+        <h1 style="text-align: center;" class="t1">CASIO</h1>
+        <fieldset><h3 style="color: white;">IF YOU HAVE <br> SOLVE THIS</h3> 
+            <center>
+            <input type="number" placeholder="enter value"><br><br>
+            <input type="number" placeholder="enter value"><br><br>
+            <button id="v1">+</button>
+            <button id="v2">-</button><br><br>
+            <button id="v3">*</button>
+            <button id="v4">/</button>
+            <h1 id="v5" style="color: white;">TOTAL</h1>
+            <button id="t1"></button>
+            
+            
+
+        </center>
+        <h3 style="color: white;">YOU WILL HAVE BEEN</h3>
+        <h1 style="color:white ">GENIUS</h1> 
+        
+            <script>
+                document.getElementById("v1").addEventListener("click",adi_fun)
+                function adi_fun()
+                {
+                  var f_val=document.getElementsByTagName("input")[0].value
+                  var s_val=document.getElementsByTagName("input")[1].value
+                  var results=parseInt(f_val)+parseInt(s_val)
+                  document.getElementById("v5").innerHTML="TOTAL="+results
+                  document.getElementById("t1").innerHTML=""+results
+                //   alert(results)
+                }
+                document.getElementById("v2").addEventListener("click",sub_fun)
+                function sub_fun()
+                {
+                  var f_val=document.getElementsByTagName("input")[0].value
+                  var s_val=document.getElementsByTagName("input")[1].value
+                  var f_results=parseInt(f_val)-parseInt(s_val)
+                  document.getElementById("v5").innerHTML="TOTAL="+f_results
+                     document.getElementsById("t1").innerHTML=""+results
+                //   alert(results)
+                }
+                document.getElementById("v3").addEventListener("click",mul_fun)
+                function mul_fun()
+                {
+                  var f_val=document.getElementsByTagName("input")[0].value
+                  var s_val=document.getElementsByTagName("input")[1].value
+                  var f_results=parseInt(f_val)*parseInt(s_val)
+                  document.getElementById("v5").innerHTML="TOTAL="+f_results
+                  document.getElementById("t1").innerHTML=""+results
+                //   alert(f_results)
+                }
+                // document.getElementById("v1").addEventListener("click",div_fun)
+                // function div_fun()
+                // {
+                //   var f_val=document.getElementsByTagName("input")[0].value
+                //   var s_val=document.getElementsByTagName("input")[1].value
+                //   var f_results=parseInt(f_val)/parseInt(s_val)
+                //   document.getElementById("v5").innerHTML="TOTAL="+f_results
+                //   alert("f_results")
+                // }
+
+            </script>
+        </fieldset>
+        
+    </body>
+</html>
